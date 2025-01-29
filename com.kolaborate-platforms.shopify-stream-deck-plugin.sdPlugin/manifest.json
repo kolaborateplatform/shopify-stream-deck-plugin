@@ -1,0 +1,87 @@
+{
+	"Name": "Shopify Stream Deck Plugin",
+	"Version": "0.1.0.0",
+	"Author": "Kolaborate Platforms",
+	"Actions": [
+		{
+			"Name": "Order Status Toggle",
+			"UUID": "com.kolaborate-platforms.shopify-stream-deck-plugin.orderStatus",
+
+			"Tooltip": "Toggle order fulfillment status with a single press.",
+			"PropertyInspectorPath": "ui/order-status.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/order-status/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stock Alert Monitor",
+			"UUID": "com.kolaborate-platforms.shopify-stream-deck-plugin.stockAlert",
+
+			"Tooltip": "Monitor inventory levels and receive low stock alerts.",
+			"PropertyInspectorPath": "ui/stock-alert.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/stock-alert/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Quick Price Update",
+			"UUID": "com.kolaborate-platforms.shopify-stream-deck-plugin.priceUpdate",
+
+			"Tooltip": "Quickly update product prices with predefined adjustments.",
+			"PropertyInspectorPath": "ui/price-update.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/price-update/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Sales Dashboard",
+			"UUID": "com.kolaborate-platforms.shopify-stream-deck-plugin.salesDashboard",
+
+			"Tooltip": "View key sales metrics with auto-refresh functionality.",
+			"PropertyInspectorPath": "ui/sales-dashboard.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/sales-dashboard/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	],
+	"Category": "Shopify Stream Deck Plugin",
+
+	"CodePath": "bin/plugin.js",
+	"Description": "The Shopify Stream Deck Plugin enables Shopify store owners and managers to control their e-commerce operations directly from their Elgato stream deck device, streamlining common tasks and providing quick access to critical store functions.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.4"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "10.15"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "com.kolaborate-platforms.shopify-stream-deck-plugin"
+}

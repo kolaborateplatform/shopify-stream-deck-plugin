@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Price Update Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v3/sdpi-components.js"></script>
+</head>
+<body>
+    <sdpi-item label="Update Type">
+        <sdpi-select setting="updateType" default="fixed">
+            <option value="fixed">Fixed Amount</option>
+            <option value="percentage">Percentage</option>
+        </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Adjustment Value">
+        <sdpi-range setting="adjustmentValue" min="-50" max="50" step="1" default="5" showlabels></sdpi-range>
+    </sdpi-item>
+
+    <sdpi-item label="Apply To">
+        <sdpi-select setting="applyTo" default="selected">
+            <option value="selected">Selected Products</option>
+            <option value="category">Product Category</option>
+            <option value="all">All Products</option>
+        </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Confirmation Required">
+        <sdpi-checkbox setting="requireConfirmation" default="true">
+            Require confirmation before price update
+        </sdpi-checkbox>
+    </sdpi-item>
+</body>
+</html>

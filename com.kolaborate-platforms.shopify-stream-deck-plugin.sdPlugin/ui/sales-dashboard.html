@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Sales Dashboard Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v3/sdpi-components.js"></script>
+</head>
+<body>
+    <sdpi-item label="Metric to Display">
+        <sdpi-select setting="metricType" default="daily">
+            <option value="daily">Daily Sales</option>
+            <option value="weekly">Weekly Sales</option>
+            <option value="monthly">Monthly Sales</option>
+            <option value="orders">Order Count</option>
+        </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Display Format">
+        <sdpi-select setting="displayFormat" default="number">
+            <option value="number">Number Only</option>
+            <option value="graph">Mini Graph</option>
+            <option value="both">Number + Graph</option>
+        </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Auto-refresh Interval (minutes)">
+        <sdpi-range setting="refreshInterval" min="1" max="60" step="1" default="5" showlabels></sdpi-range>
+    </sdpi-item>
+
+    <sdpi-item label="Compare to Previous Period">
+        <sdpi-checkbox setting="showComparison" default="true">
+            Show percentage change
+        </sdpi-checkbox>
+    </sdpi-item>
+</body>
+</html>

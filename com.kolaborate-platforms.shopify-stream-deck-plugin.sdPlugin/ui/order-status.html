@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Order Status Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v3/sdpi-components.js"></script>
+</head>
+<body>
+    <sdpi-item label="Status to Toggle">
+        <sdpi-select setting="statusType" default="unfulfilled">
+            <option value="unfulfilled">Unfulfilled ↔ Fulfilled</option>
+            <option value="paid">Unpaid ↔ Paid</option>
+            <option value="shipped">Unshipped ↔ Shipped</option>
+        </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Confirmation Required">
+        <sdpi-checkbox setting="requireConfirmation" default="true">
+            Require confirmation before status change
+        </sdpi-checkbox>
+    </sdpi-item>
+
+    <sdpi-item label="Auto-refresh Interval (seconds)">
+        <sdpi-range setting="refreshInterval" min="5" max="60" step="5" default="30" showlabels></sdpi-range>
+    </sdpi-item>
+
+    <sdpi-item label="Notification Sound">
+        <sdpi-checkbox setting="playSound" default="true">
+            Play sound on status change
+        </sdpi-checkbox>
+    </sdpi-item>
+</body>
+</html>
